@@ -10,7 +10,7 @@ if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != "") {
 
 }
 
-$title = "Login";
+$title = "Register";
 
 if ($_POST["username"]) {
 

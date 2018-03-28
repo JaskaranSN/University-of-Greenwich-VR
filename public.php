@@ -120,7 +120,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <h3>University Map</h3>
 
-<img id="myImg" src="MAP1.PNG" alt="KEY:" width="900" height="600">
+<img id="myImg" src="MAP1.PNG" alt="" width="900" height="600">
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -154,7 +154,7 @@ span.onclick = function() {
 <div class="row">
     <div class="col-lg-9">
  <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["edit"])) { ?>
-                                <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> CHAPEL</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
+                                <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> Chapel</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='https://players.cupix.com/p/sT7qV5Es';"><i class="fa fa-edit"></i> VR TOUR</button> 
                                 <?php } ?>
                                 <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
                                     <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>

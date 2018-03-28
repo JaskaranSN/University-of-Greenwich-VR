@@ -17,6 +17,7 @@ $title = "HOMEPAGE";
 include 'header.php';
 ?>
 <title><?php echo PROJECT_NAME ?> - Homepage</title>
+
 <div class="row">
     <div class="col-lg-9">
 

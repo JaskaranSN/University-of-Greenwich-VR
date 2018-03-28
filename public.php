@@ -21,7 +21,7 @@ die("You dont have the permission to access this page");
 }
 
 // set page title
-$title = "Public";
+$title = "<h2>University of Greenwich Public VR Tours</h2>";
 
 
 include 'header.php';
@@ -118,7 +118,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 <body>
 
-<h2>Image Modal</h2>
+<h3>University Map</h3>
+
 <img id="myImg" src="MAP1.PNG" alt="KEY:" width="900" height="600">
 
 <!-- The Modal -->
@@ -152,7 +153,62 @@ span.onclick = function() {
 </script>
 <div class="row">
     <div class="col-lg-9">
-
+ <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["edit"])) { ?>
+                                <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> CHAPEL</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
+                                <?php } ?>
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
+                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
+                                <?php } ?>
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
+                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
+                                <?php } ?>
+							<br> </br>
+							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> King Charles</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
+                                
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
+                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
+                                <?php } ?>
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
+                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
+                                <?php } ?>
+							<br> </br>	 
+							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> King Williams</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
+                               
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
+                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
+                                <?php } ?>
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
+                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
+                                <?php } ?>
+							<br> </br>	 
+							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> Painted Halls</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
+                               
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
+                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
+                                <?php } ?>
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
+                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
+                                <?php } ?>
+							<br> </br>	
+							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> Queen Anne</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
+                               
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
+                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
+                                <?php } ?>
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
+                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
+                                <?php } ?>
+							<br> </br>	
+							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> Queen Mary</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
+                               
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
+                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
+                                <?php } ?>
+                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
+                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
+                                <?php } ?>
+							<br> </br>	
+							
         <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["create"])) { ?>
             <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> ADD PUBLIC</button> 
         <?php } ?>

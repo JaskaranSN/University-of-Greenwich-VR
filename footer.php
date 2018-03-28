@@ -7,7 +7,7 @@
     <div class="navbar navbar-inverse footer">
         <div class="container-fluid">
             <div class="copyright">
-                <a href="http://localhost/multi-user-admin/index.php" target="_blank">&copy; Jaskaran Singh Natt   - <?php echo date("Y"); ?></a> All rights reserved
+                <a href="Terms&Conditions.pdf" target="_blank">&copy; Terms and Conditions   - Jaskaran Singh Natt - <?php echo date("Y"); ?></a>  All rights reserved
             </div>
 
         </div>

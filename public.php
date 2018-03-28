@@ -190,7 +190,7 @@ span.onclick = function() {
                                     <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
                                 <?php } ?>
 							<br> </br>	
-							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> Queen Anne</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
+							Queen Anne <br> </br> <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
                                
                                 <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
                                     <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
@@ -199,7 +199,7 @@ span.onclick = function() {
                                     <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
                                 <?php } ?>
 							<br> </br>	
-							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> Queen Mary</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
+							 Queen Mary  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
                                
                                 <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
                                     <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>

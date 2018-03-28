@@ -126,7 +126,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .close {
     position: absolute;
     top: 45px;
-    right: 900px;
+    right: 35px;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
@@ -154,7 +154,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
 <p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
 
-<img id="myImg" src="Map.PNG" alt="KEY:" width="300" height="200">
+<img id="myImg" src="MAP1.PNG" alt="KEY:" width="300" height="200">
 
 <!-- The Modal -->
 <div id="myModal" class="modal">

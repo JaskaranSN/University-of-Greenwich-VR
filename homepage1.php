@@ -28,15 +28,15 @@ include 'header.php';
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="1.jpg" alt="Los Angeles"width="pixels">
+      <img src="1.PNG" alt="Los Angeles"width="pixels">
     </div>
 
     <div class="item">
-      <img src="MAP.png" alt="Chicago" width="pixels">
+      <img src="MAP.PNG" alt="Chicago" width="pixels">
     </div>
 
     <div class="item">
-      <img src="MAP.png" alt="New York" width="pixels">
+      <img src="MAP.PNG" alt="New York" width="pixels">
 	  
     </div>
   </div>

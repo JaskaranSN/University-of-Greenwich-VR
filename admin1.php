@@ -38,7 +38,7 @@ $name = $u_username
 ?>
 
         <?php if (authorize($_SESSION["access"]["ADMIN PANEL"]["ADMIN"]["create"])) { ?>
-            <button class="btn btn-sm btn-primary" input type="button" onclick="location.href='https://databases.000webhost.com/index.php?token=30f1e85346f37dacb32209287c14bd49';"><i class="fa fa-plus"></i> Manage Database (PHPmyadmin)</button>
+            <button class="btn btn-sm btn-primary" input type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-plus"></i> Manage Database (PHPmyadmin)</button>
         <?php } ?>
         <div style="height: 10px;">&nbsp;</div>
 

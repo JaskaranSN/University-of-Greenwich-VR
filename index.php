@@ -91,6 +91,36 @@ if ($_POST["username"]) {
 
 include 'header.php';
 ?>
+<style>
+body {
+              background-color:#999999;
+              font-family: 'Oswald', sans-serif;
+      }
+p
+{
+  color:#000000;
+  font-size:20px;
+}
+
+.textBox
+{
+  height:30px;
+  width:300px;
+}
+
+button
+{
+  height:30px;
+  width:150px;
+  border-radius:8px;
+  padding:10px;
+  font-size:20px;
+  font-family: 'Oswald', sans-serif;
+  height:52px;
+  cursor:pointer;
+  background-color:wheat;
+}
+</style>
 <div class="row">
     <div class="col-lg-9">
         <form class="form-horizontal" name="contact_form" id="contact_form" method="post" action="">
@@ -139,8 +169,6 @@ include 'header.php';
         </form>
     </div>
 
-    <div class="col-lg-3">
-        <?php include 'sidebar.php'; ?>
-    </div>
+
 </div>
 <?php include 'footer.php'; ?>

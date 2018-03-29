@@ -284,6 +284,36 @@ body{
   to {opacity: 1}
 }
 </style>
+<style>
+body {
+              background-color:#999999;
+              font-family: 'Oswald', sans-serif;
+      }
+p
+{
+  color:#000000;
+  font-size:20px;
+}
+
+.textBox
+{
+  height:30px;
+  width:300px;
+}
+
+button
+{
+  height:30px;
+  width:150px;
+  border-radius:8px;
+  padding:10px;
+  font-size:20px;
+  font-family: 'Oswald', sans-serif;
+  height:52px;
+  cursor:pointer;
+  background-color:wheat;
+}
+</style>
 </head>
 <body>
 
@@ -943,7 +973,7 @@ function outsideClick(e){
 
 
         <div style="height: 20px;">&nbsp;</div>
-        <a href="dashboard.php"><button class="btn btn-lg btn-info" type="button"><i class="fa fa-backward"></i> Back to dashboard</button></a>
+        <a href="homepage.php"><button class="btn btn-lg btn-info" type="button"><i class="fa fa-backward"></i> Homepage</button></a>
 
     </div>
 

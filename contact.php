@@ -16,11 +16,41 @@ die("You dont have the permission to access this page");
 }
 
 // set page title
-$title = "Contact US";
+$title = "Contact Us";
 
 
 include 'header.php';
 ?>
+<style>
+body {
+              background-color:#999999;
+              font-family: 'Oswald', sans-serif;
+      }
+p
+{
+  color:#000000;
+  font-size:20px;
+}
+
+.textBox
+{
+  height:30px;
+  width:300px;
+}
+
+button
+{
+  height:30px;
+  width:150px;
+  border-radius:8px;
+  padding:10px;
+  font-size:20px;
+  font-family: 'Oswald', sans-serif;
+  height:52px;
+  cursor:pointer;
+  background-color:wheat;
+}
+</style>
 <title><?php echo PROJECT_NAME ?> - Contact Us</title>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -62,18 +92,39 @@ include 'header.php';
 
  <div class="panel panel-default">
   <header class="panel-heading">
-   <h5 class="panel-title">How to contact us</h5>
+   <h2 class="panel-title"><h2>How to contact us</h2>
   </header>
 
   <div class="panel-body">
-  <h5> Email: <br>
-  Phone number: <br>
+  <article>
+  <h1>London</h1>
+  <h4> Phone number:  <h5 id="p1">020 8331 8000</h5>
+  <h4> Email: <h5 id="p2">jn2566u@greenwich.ac.uk </h5>
+  <h4> Address: <h5 id="p3"> University of Greenwich<br> </br> Park Row, London SE10 9LS </h5><br>
+<button onclick="copyToClipboard('#p1')">Copy Number</button>
+<button onclick="copyToClipboard('#p2')">Copy Email</button>
+<button onclick="copyToClipboard('#p3')">Copy Address</button>
+</article>
+  
+   <div class="w3-container">
+  <h1>Header</h1>
+</div>
   Address: <br>
-  Google Map: <div class="mapouter"><div class="gmap_canvas"><iframe width="900" height="700" id="gmap_canvas" src="https://maps.google.com/maps?q=Park Row, London SE10 9LS&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><a href="https://www.webdesign-muenchen-pb.de"></a><style>.mapouter{overflow:hidden;height:700px;width:900px;}.gmap_canvas {background:none!important;height:700px;width:900px;}</style></div></h5>
+  Google Map: <br> <div class="mapouter"><div class="gmap_canvas"><iframe width="1075" height="800" id="gmap_canvas" src="https://maps.google.com/maps?q=University of Greenwich Park Row, London SE10 9LS &t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.mapouter{overflow:hidden;height:800px;width:1075px;}.gmap_canvas {background:none!important;height:800px;width:1075px;}</style></div>
    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </p>
   </div>
 </div>
 
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
+</script>
 </body>
 
 <!--<div class="row">
@@ -115,12 +166,10 @@ include 'header.php';
         </div> -->
 
         <div style="height: 20px;">&nbsp;</div>
-        <a href="dashboard.php"><button class="btn btn-lg btn-info" type="button"><i class="fa fa-backward"></i> Back to dashboard</button></a>
+        <body><a href="homepage.php"><button class="btn btn-lg btn-info" type="button"><i class="fa fa-backward"></i>Homepage</button></a></body>
 
     </div>
 
-    <div class="col-lg-3">
-        <?php include 'sidebar.php'; ?>
-    </div>
+
 </div>
 <?php include 'footer.php'; ?>

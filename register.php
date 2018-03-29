@@ -138,8 +138,6 @@ include 'header.php';
         </form>
     </div>
 
-    <div class="col-lg-3">
-        <?php include 'sidebar.php'; ?>
-    </div>
+
 </div>
 <?php include 'footer.php'; ?>

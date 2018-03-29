@@ -120,7 +120,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <h3>University Map</h3>
 
-<img id="myImg" src="MAP1.PNG" alt="" width="900" height="600">
+<img id="myImg" src="MAP1.PNG" alt="" width="1100" height="800">
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -151,6 +151,81 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 </script>
+        <div id="page-wrapper">
+<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Locations
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+									<?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
+                                        <th>Icon</th>
+                                        <th>Location name</th>
+                                        <th>Virtual Reality Tour</th>
+                                        <th>Slideshow</th>
+                                        <th>Public</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td><input id="image" type="image" alt="Chapel"
+  src="icons/Chapel.PNG" width="40" height="40"></td>
+                                        <td>Chapel</td>
+                                        <td><button class="btn btn-sm btn-info" type="button" onclick="location.href='https://players.cupix.com/p/sT7qV5Es';"><i class="fa fa-edit"></i> VR TOUR</button></td>
+                                        <td class="center">4</td>
+                                        <td class="center">X</td>
+                                    </tr>
+                                    <tr class="even gradeC">
+                                        <td><input id="image" type="image" alt="King Charles"
+  src="icons/King_Charles.PNG" width="40" height="40"></td>
+                                        <td>King Charles</td>
+                                        <td><button class="btn btn-sm btn-info" type="button" onclick="location.href='https://players.cupix.com/p/sT7qV5Es';"><i class="fa fa-edit"></i> VR TOUR</button></td>
+                                        <td class="center">5</td>
+                                        <td class="center">C</td>
+                                    </tr>
+                                    <tr class="odd gradeA">
+                                        <td><input id="image" type="image" alt="King Williams"
+  src="icons/King_William.PNG" width="40" height="40"></td>
+                                        <td>King Williams</td>
+                                        <td><button class="btn btn-sm btn-info" type="button" onclick="location.href='https://players.cupix.com/p/sT7qV5Es';"><i class="fa fa-edit"></i> VR TOUR</button></td>
+                                        <td class="center">5.5</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="even gradeA">
+                                        <td><input id="image" type="image" alt="Painted Halls"
+  src="icons/Painted_Halls.PNG" width="40" height="40"></td>
+                                        <td>Painted Halls</td>
+                                        <td><button class="btn btn-sm btn-info" type="button" onclick="location.href='https://players.cupix.com/p/sT7qV5Es';"><i class="fa fa-edit"></i> VR TOUR</button></td>
+                                        <td class="center">6</td>
+                                        <td class="center">A</td>
+                                    </tr>
+                                    <tr class="odd gradeA">
+                                        <td><input id="image" type="image" alt="Queen Anne"
+  src="icons/Queen_Anne.PNG" width="40" height="40"></td>
+                                        <td>Queen Anne</td>
+                                        <td><button class="btn btn-sm btn-info" type="button" onclick="location.href='https://players.cupix.com/p/sT7qV5Es';"><i class="fa fa-edit"></i> VR TOUR</button></td>
+                                        <td class="center">7</td>
+                                        <td class="center">A</td>
+										
+                                    </tr>
+									<tr class="odd gradeA">
+                                        <td><input id="image" type="image" alt="Queen Mary"
+  src="icons/Queen_Mary.PNG" width="40" height="40"></td>
+                                        <td>Queen Mary</td>
+                                        <td><button class="btn btn-sm btn-info" type="button" onclick="location.href='https://players.cupix.com/p/sT7qV5Es';"><i class="fa fa-edit"></i> VR TOUR</button></td>
+                                        <td class="center">7</td>
+                                        <td class="center">A</td>
+										
+                                    </tr>
+<?php } ?>
+
+                                </tbody>
+                            </table>
 <div class="row">
     <div class="col-lg-9">
  <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["edit"])) { ?>

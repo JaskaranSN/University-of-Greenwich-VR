@@ -1686,6 +1686,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
 
 }(jQuery);
 
+
 /* ========================================================================
  * Bootstrap: tab.js v3.1.0
  * http://getbootstrap.com/javascript/#tabs
@@ -1947,5 +1948,6 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
       $spy.affix(data)
     })
   })
+
 
 }(jQuery);

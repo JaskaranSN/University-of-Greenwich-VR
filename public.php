@@ -193,6 +193,84 @@ body {font-family: Arial, Helvetica, sans-serif;}
     }
 }
 </style>
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:17px;
+  line-height:1.6;
+}
+
+.button{
+  background:coral;
+  padding:1em 2em;
+  color:#fff;
+  border:0;
+}
+
+.button:hover{
+  background:#333;
+}
+
+.modal{
+  display:none;
+  position: fixed;
+  z-index:1;
+  left: 0;
+  top:0;
+  height: 100%;
+  width:100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content{
+  background-color:#f4f4f4;
+  margin: 20% auto;
+  width:70%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+  animation-name:modalopen;
+  animation-duration:1s;
+}
+
+.modal-header h2, .modal-footer h3{
+  margin:0;
+}
+
+.modal-header{
+  background:coral;
+  padding:15px;
+  color:#fff;
+}
+
+.modal-body{
+  padding:10px 20px;
+}
+
+.modal-footer{
+  background:coral;
+  padding:10px;
+  color:#fff;
+  text-align: center;
+}
+
+.closeBtn{
+  color:#ccc;
+  float: right;
+  font-size:30px;
+  color:#fff;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+  color:#000;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+@keyframes modalopen{
+  from{ opacity: 0}
+  to {opacity: 1}
+}
+</style>
 </head>
 <body>
 
@@ -241,7 +319,7 @@ span.onclick = function() {
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-									<?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
+									<?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
                                         <th>Icon</th>
                                         <th>Location name</th>
                                         <th>Virtual Reality Tour</th>
@@ -296,71 +374,67 @@ span.onclick = function() {
   src="icons/Queen_Mary.PNG" width="40" height="40"></td>
                                         <td>Queen Mary</td>
                                         <td><button class="btn btn-sm btn-info" type="button" onclick="location.href='https://players.cupix.com/p/sT7qV5Es';"><i class="fa fa-edit"></i> VR TOUR</button></td>
-                                        <td class="center">7</td>
-                                        <td> </td>
+                                        
+                                        <td> <button class="btn btn-sm btn-warning" button id="modalBtn" class="button" >SLIDESHOW</button>
+
+  <div id="simpleModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+          <span class="closeBtn">&times;</span>
+          <h2>Modal Header</h2>
+      </div>
+      <div class="modal-body">
+        <p>Hello...I am a modal</p>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="1.PNG" alt="Los Angeles"width="pixels">
+    </div>
+
+    <div class="item">
+      <img src="MAP.PNG" alt="Chicago" width="pixels">
+    </div>
+
+    <div class="item">
+      <img src="MAP.PNG" alt="New York" width="pixels">
+	  
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+ 
+</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo commodi ab.</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  </div></td>
+  <td class="center">7</td>
 										
                                     </tr>
 <?php } ?>
 
                                 </tbody>
                             </table>
-<div class="row">
-    <div class="col-lg-9">
- <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["edit"])) { ?>
-                                <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> Chapel</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='https://players.cupix.com/p/sT7qV5Es';"><i class="fa fa-edit"></i> VR TOUR</button> 
-                                <?php } ?>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
-                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
-                                <?php } ?>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
-                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
-                                <?php } ?>
-							<br> </br>
-							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> King Charles</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
-                                
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
-                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
-                                <?php } ?>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
-                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
-                                <?php } ?>
-							<br> </br>	 
-							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> King Williams</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
-                               
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
-                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
-                                <?php } ?>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
-                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
-                                <?php } ?>
-							<br> </br>	 
-							<button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> Painted Halls</button>  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
-                               
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
-                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
-                                <?php } ?>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
-                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
-                                <?php } ?>
-							<br> </br>	
-							Queen Anne <br> </br> <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
-                               
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
-                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
-                                <?php } ?>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
-                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
-                                <?php } ?>
-							<br> </br>	
-							 Queen Mary  <button class="btn btn-sm btn-info" type="button" onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-edit"></i> EDIT</button> 
-                               
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
-                                    <button class="btn btn-sm btn-warning" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-search-plus"></i> VIEW</button>
-                                <?php } ?>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
-                                    <button class="btn btn-sm btn-danger" type="button"onclick="location.href='http://localhost/phpmyadmin/';"><i class="fa fa-trash-o"></i> DELETE</button>
-                                <?php } ?>
-							<br> </br>	
+
 				<script>
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -387,41 +461,39 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-</script>		
-        <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["create"])) { ?>
-            <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-plus"></i> ADD PUBLIC</button> 
-        <?php } ?>
-        <div style="height: 10px;">&nbsp;</div>
+</script>	
+<script>
+// Get modal element
+var modal = document.getElementById('simpleModal');
+// Get open modal button
+var modalBtn = document.getElementById('modalBtn');
+// Get close button
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
 
-        <div class=" table-responsive">
-            <table class="table table-striped table-hover ">
-                <tbody><tr>
-                        <th>#</th>
-                        <th>Sample heading</th>
-                        <th>Sample heading</th>
-                        <th style="width: 280px;">Actions</th>
-                    </tr>
-                    <?php for ($i = 1; $i <= 10; $i++) { ?>
-                        <tr>
-                            <td><?php echo $i; ?></td>
-                            <td>Sample content</td>
-                            <td>Sample content</td>
-                            <td>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["edit"])) { ?>
-                                    <button class="btn btn-sm btn-info" type="button"><i class="fa fa-edit"></i> EDIT</button> 
-                                <?php } ?>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["view"])) { ?>
-                                    <button class="btn btn-sm btn-warning" type="button"><i class="fa fa-search-plus"></i> VIEW</button>
-                                <?php } ?>
-                                <?php if (authorize($_SESSION["access"]["VIRTUAL"]["PUBLIC"]["delete"])) { ?>
-                                    <button class="btn btn-sm btn-danger" type="button"><i class="fa fa-trash-o"></i> DELETE</button>
-                                <?php } ?>
-                            </td>
-                        </tr>
-                    <?php } ?>
+// Listen for open click
+modalBtn.addEventListener('click', openModal);
+// Listen for close click
+closeBtn.addEventListener('click', closeModal);
+// Listen for outside click
+window.addEventListener('click', outsideClick);
 
-                </tbody></table>
-        </div>
+// Function to open modal
+function openModal(){
+  modal.style.display = 'block';
+}
+
+// Function to close modal
+function closeModal(){
+  modal.style.display = 'none';
+}
+
+// Function to close modal if outside click
+function outsideClick(e){
+  if(e.target == modal){
+    modal.style.display = 'none';
+  }
+}	
+</script>       
 
 
         <div style="height: 20px;">&nbsp;</div>
@@ -429,8 +501,7 @@ window.onclick = function(event) {
 
     </div>
 
-    <div class="col-lg-3">
-        <?php include 'sidebar.php'; ?>
-    </div>
+    
 </div>
+</HTML>
 <?php include 'footer.php'; ?>

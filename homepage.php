@@ -11,11 +11,13 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["user_id"] == "") {
 
 
 // set page title
-$title = "Hompage";
+
+$title = "Homepage";
 
 
 include 'header.php';
 ?>
+
 <style>
 body {
               background-color:#999999;

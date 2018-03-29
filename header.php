@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="https://vrgre.000webhostapp.com/favicon_96x96_tfI_icon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon_96x96_tfI_icon.ico" type="image/x-icon" />
         <meta name="author" content="Jaskaran Singh Natt">
         <meta name="keywords" content="VR, University of Greenwich, Demo">
 
@@ -37,7 +37,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="http://www.gre.ac.uk/" target="_blank"><span class="fa fa-home"></span> University of Greenwich</a>
+                    <a class="navbar-brand" href="http://www.gre.ac.uk/" target="_blank"><input id="image" type="image" alt="ICON"
+  src="favicon_96x96_tfI_icon.ico" width="20" height="20"></span> University of Greenwich</a>
                 </div>
 
 

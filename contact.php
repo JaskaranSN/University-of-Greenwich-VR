@@ -52,65 +52,34 @@ button
 }
 </style>
 <title><?php echo PROJECT_NAME ?> - Contact Us</title>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="Images\Placeholder1.jpg" alt="Placeholder1"width="pixels">
-    </div>
-
-    <div class="item">
-      <img src="Images\Placeholder2.jpg" alt="Placeholder2" width="pixels">
-    </div>
-
-    <div class="item">
-      <img src="Images\Placeholder3.jpg" alt="Placeholder3" width="pixels">
-	  
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
- 
-</div>
 <body> 
  
 
  <div class="panel panel-default">
   <header class="panel-heading">
-   <h2 class="panel-title"><h2>How to contact us</h2>
+   <h2 class="panel-title"><h2>How to Contact Us</h2>
   </header>
 
   <div class="panel-body">
   <article>
-  <h1>London</h1>
+  <h3>Google Maps</h3>
+  <div class="mapouter"><div class="gmap_canvas"><iframe width="1075" height="800" id="gmap_canvas" src="https://maps.google.com/maps?q=University of Greenwich Park Row, London SE10 9LS &t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.mapouter{overflow:hidden;height:800px;width:1075px;}.gmap_canvas {background:none!important;height:800px;width:1075px;}</style></div>
   <h4> Phone number:  <h5 id="p1">020 8331 8000</h5>
   <h4> Email: <h5 id="p2">jn2566u@greenwich.ac.uk </h5>
   <h4> Address: <h5 id="p3"> University of Greenwich<br> </br> Park Row, London SE10 9LS </h5><br>
-<button onclick="copyToClipboard('#p1')">Copy Number</button>
-<button onclick="copyToClipboard('#p2')">Copy Email</button>
-<button onclick="copyToClipboard('#p3')">Copy Address</button>
+  <div col-lg-9>
+<button class="btn btn-default" onclick="copyToClipboard('#p1')">Copy Number </button>
+<button class="btn btn-default" onclick="copyToClipboard('#p2')">Copy Email</button>
+<button class="btn btn-default"onclick="copyToClipboard('#p3')">Copy Address</button>
+<a href="https://www.google.com/maps/contrib/115620153714965424704/photos/@51.4826689,-0.0056115,3a,75y,243.69h,90t/data=!3m7!1e1!3m5!1sAF1QipMYJWSIr9bVqdOMOgU44kVBQf-UGZzLDfBOhEX6!2e10!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMYJWSIr9bVqdOMOgU44kVBQf-UGZzLDfBOhEX6%3Dw365-h260-k-no-pi-0-ya48.811512-ro-0-fo100!7i6912!8i3456!4m3!8m2!3m1!1e1"
+ class="btn btn-default">Google VR</a>
+</div>
 </article>
   
    <div class="w3-container">
-  <h1>Header</h1>
 </div>
-  Address: <br>
-  Google Map: <br> <div class="mapouter"><div class="gmap_canvas"><iframe width="1075" height="800" id="gmap_canvas" src="https://maps.google.com/maps?q=University of Greenwich Park Row, London SE10 9LS &t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.mapouter{overflow:hidden;height:800px;width:1075px;}.gmap_canvas {background:none!important;height:800px;width:1075px;}</style></div>
+  <h4>Additional information</h4><br> 
    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </p>
   </div>
 </div>

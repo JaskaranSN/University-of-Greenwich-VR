@@ -316,9 +316,10 @@ button
 </style>
 </head>
 <body>
-
-<h3>University Map</h3>
-
+ <div class="panel panel-default">
+  <header class="panel-heading">
+   <h2 class="panel-title"><h2>University Map</h2>
+  </header>
 <img id="myImg1" src="MAP1.PNG" alt="" width="1100" height="800">
 
 <!-- The Modal -->

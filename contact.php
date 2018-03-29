@@ -64,7 +64,7 @@ button
   <div class="panel-body">
   <article>
   <h3>Google Maps</h3>
-  <div class="mapouter"><div class="gmap_canvas"><iframe width="1075" height="800" id="gmap_canvas" src="https://maps.google.com/maps?q=University of Greenwich Park Row, London SE10 9LS &t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.mapouter{overflow:hidden;height:800px;width:1075px;}.gmap_canvas {background:none!important;height:800px;width:1075px;}</style></div>
+  <div class="mapouter"><div class="gmap_canvas"><iframe style='height: 100%; width: 100%; object-fit: contain' id="gmap_canvas" src="https://maps.google.com/maps?q=University of Greenwich Park Row, London SE10 9LS &t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.mapouter{overflow:hidden;height:800px;width:1075px;}.gmap_canvas {background:none!important;height:800px;width:1075px;}</style></div>
   <h4> Phone number:  <h5 id="p1">020 8331 8000</h5>
   <h4> Email: <h5 id="p2">jn2566u@greenwich.ac.uk </h5>
   <h4> Address: <h5 id="p3"> University of Greenwich<br> </br> Park Row, London SE10 9LS </h5><br>

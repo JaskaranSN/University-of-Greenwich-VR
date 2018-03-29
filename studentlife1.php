@@ -109,5 +109,5 @@ include 'header.php';
 
     </div>
 
-<?php include 'footer.php'; ?>
+<footer class "footer"<?php include 'footer.php'; ?>>
 </div>
